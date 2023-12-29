@@ -76,17 +76,19 @@ const Draw = () => {
 					</div>
 				</div>
 
-				<div className='Draw_ButtonDiv'>
-					<Button White={true} Text={'팀 뽑기'} />
-				</div>
+				<div className='Draw_Buttons'>
+					<div className='Draw_ButtonDiv'>
+						<Button White={true} Text={'팀 뽑기'} />
+					</div>
 
-				<div className='Draw_NowPeople'>
-					<Button
-						Text={'현재 참가자'}
-						onClickMethod={() => {
-							history('/starting');
-						}}
-					/>
+					<div className='Draw_NowPeople'>
+						<Button
+							Text={'현재 참가자'}
+							onClickMethod={() => {
+								history('/starting');
+							}}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

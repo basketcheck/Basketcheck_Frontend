@@ -7,7 +7,14 @@ const Index = () => {
 	const history = useNavigate();
 	return (
 		<div className='Header_Container'>
-			<div className='Main_Text'>BSSMBALL</div>
+			<div
+				className='Main_Text'
+				onClick={() => {
+					history('/');
+				}}
+			>
+				BSSMBALL
+			</div>
 			{localStorage.getItem('accessToken') ? (
 				<div className='Status_Login'>
 					<Button
@@ -21,7 +28,7 @@ const Index = () => {
 						Text={'로그아웃'}
 						onClickMethod={() => {
 							localStorage.removeItem('accessToken');
-              history('/')
+							history('/');
 						}}
 						White={true}
 					/>

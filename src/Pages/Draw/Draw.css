@@ -46,13 +46,9 @@
 	background-color: #28282b;
 }
 
-.Draw_ButtonDiv > Button {
-  font-size: 18px;
-}
-
-.Draw_NowPeople {
-	position: absolute;
-	top: 90%;
-	left: 75%;
-	transform: translate(-50%, -50%);
+.Draw_Buttons {
+	display: flex;
+	flex-direction: row;
+	width: 70vw;
+	justify-content: space-around;
 }
