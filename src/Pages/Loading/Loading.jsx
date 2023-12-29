@@ -1,8 +1,8 @@
 import React from 'react';
-import './index.css';
+import './Loading.css';
 import Logo from '../../IMG/Logo.png';
 
-const Index = () => {
+const Loading = () => {
 	return (
 		<div className='Loading_Container'>
 			<img src={Logo} alt='LogoIMG' className='Logo_Img' />
@@ -11,4 +11,4 @@ const Index = () => {
 	);
 };
 
-export default Index;
+export default Loading;

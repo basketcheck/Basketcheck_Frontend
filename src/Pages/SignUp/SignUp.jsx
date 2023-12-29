@@ -1,7 +1,7 @@
 import React from 'react';
-import './index.css'
+import './SignUp.css'
 
-const Index = () => {
+const SignUp = () => {
   return (
     <div>
       Singup Page
@@ -9,4 +9,4 @@ const Index = () => {
   );
 }
 
-export default Index;
+export default SignUp;

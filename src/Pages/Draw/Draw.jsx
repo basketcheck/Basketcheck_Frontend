@@ -1,7 +1,7 @@
 import React from 'react';
-import './index.css'
+import './Draw.css'
 
-const Index = () => {
+const Draw = () => {
   return (
     <div>
       Darw Page
@@ -9,4 +9,4 @@ const Index = () => {
   );
 }
 
-export default Index;
+export default Draw;

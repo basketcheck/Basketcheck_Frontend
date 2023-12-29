@@ -1,12 +1,12 @@
 import React from 'react';
-import './index.css';
+import './Page404.css';
 import { useNavigate } from 'react-router-dom';
 
-import Header from '../../Components/Header/';
+import Header from '../../Components/Header/Header.jsx';
 import Logo from '../../IMG/Logo.png';
-import Button from '../../Components/UI/Button';
+import Button from '../../Components/UI/Button/Button.jsx';
 
-const Index = () => {
+const Page404 = () => {
 	const history = useNavigate();
 
 	return (
@@ -26,4 +26,4 @@ const Index = () => {
 	);
 };
 
-export default Index;
+export default Page404;

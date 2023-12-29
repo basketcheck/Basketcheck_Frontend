@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 
-import Loading from '../Pages/Loading/';
+import Loading from '../Pages/Loading/Loading.jsx';
 
 const Loadable = (Component) => (props) => {
 	return (
@@ -37,16 +37,20 @@ export default function Router() {
 }
 
 //Pages
-const Home = Loadable(lazy(() => import('../Pages/Main/')));
+const Home = Loadable(lazy(() => import('../Pages/Main/Main.jsx')));
 
-const Page404 = Loadable(lazy(() => import('../Pages/Page404/')));
+const Page404 = Loadable(
+	lazy(() => import('../Pages/Page404/Page404.jsx'))
+);
 
-const SignIn = Loadable(lazy(() => import('../Pages/SignIn')));
+const SignIn = Loadable(lazy(() => import('../Pages/SignIn/SignIn.jsx')));
 
-const SignUp = Loadable(lazy(() => import('../Pages/SignUp')));
+const SignUp = Loadable(lazy(() => import('../Pages/SignUp/SignUp.jsx')));
 
-const Draw = Loadable(lazy(() => import('../Pages/Draw/')));
+const Draw = Loadable(lazy(() => import('../Pages/Draw/Draw.jsx')));
 
-const Starting = Loadable(lazy(() => import('../Pages/Starting/')));
+const Starting = Loadable(
+	lazy(() => import('../Pages/Starting/Starting.jsx'))
+);
 
-const Bench = Loadable(lazy(() => import('../Pages/Bench/')));
+const Bench = Loadable(lazy(() => import('../Pages/Bench/Bench.jsx')));

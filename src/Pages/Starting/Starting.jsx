@@ -1,7 +1,7 @@
 import React from 'react';
-import './index.css'
+import './Starting.css'
 
-const Index = () => {
+const Starting = () => {
   return (
     <div>
       
@@ -9,4 +9,4 @@ const Index = () => {
   );
 }
 
-export default Index;
+export default Starting;
