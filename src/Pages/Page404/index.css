@@ -1,0 +1,16 @@
+.Page404_Container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.Page404_Text {
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	margin-bottom: 3%;
+}

@@ -1,20 +1,21 @@
 .Header_Container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #28282B;
-  height: 6vh;
-  width: 100vw;
-  padding: 0 3vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #28282b;
+	height: 6vh;
+	width: 100vw;
+	padding: 0 3vw;
+  position: fixed;
 }
 
 .Main_Text {
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
 }
 
 .Status_Login > Button:first-child {
-  margin-right: 2vw;
+	margin-right: 2vw;
 }

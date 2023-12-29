@@ -28,7 +28,7 @@ export default function Router() {
 				{ path: '/draw', element: <Draw /> },
 				{ path: '/starting', element: <Starting /> },
 				{ path: '/bench', element: <Bench /> },
-				{ path: '404', element: <Page404 /> },
+				{ path: '/404', element: <Page404 /> },
 				{ path: '*', element: <Navigate to='/404' replace /> },
 			],
 		},
