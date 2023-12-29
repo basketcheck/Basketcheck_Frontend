@@ -18,7 +18,14 @@ const Main = () => {
 
 			<div className='Main_Container'>
 				<div className='Main_Date'>{TodayDate}</div>
-				<img src={Logo} alt='LogoIMG' className='Logo_Img' />
+				<img
+					src={Logo}
+					alt='LogoIMG'
+					className='Logo_Img'
+					onClick={() => {
+						history('/draw');
+					}}
+				/>
 				<div
 					className='Main_GoBasketBall'
 					onClick={() => {
