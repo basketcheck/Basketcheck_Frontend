@@ -1,17 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SignIn.css';
 
 import Header from '../../Components/Header/Header.jsx';
 import Logo from '../../IMG/Logo.png';
 import Button from '../../Components/UI/Button/Button.jsx';
+import Input from '../../Components/UI/Input/Input.jsx';
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
+	const [name, setName] = useState('');
+	const [userId, setUserId] = useState('');
+	const [password, setPassword] = useState('');
+
 	return (
 		<div>
 			<Header />
 
-			<div>
+			<div className='SignIn_Container'>
 				<img src={Logo} alt='LogoIMG' className='Logo_Img' />
+				<div className='SignIn_Text'>Login</div>
+				<div className='SignIn_Form'>
+					<div className='SignIn_Form_Input'>
+						<Input
+							Type={'text'}
+							PlaceHolder={'아이디'}
+							onChangeMethod={(e) => {
+								setUserId(e.target.value);
+							}}
+						/>
+						<Input
+							Type={'password'}
+							PlaceHolder={'비밀번호'}
+							onChangeMethod={(e) => {
+								setPassword(e.target.value);
+							}}
+						/>
+					</div>
+
+					<div className='SignIn_Button_Form'>
+						<Button Text={'회원가입'}/>
+					</div>
+
+					<div className='SignIn_Login_Text'>
+						아이디가 없으신가요? <Link to={'/auth/signup'}>회원가입</Link>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

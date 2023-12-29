@@ -1,0 +1,8 @@
+.UI_Input {
+  width: 70vw;
+  height: 4.5vh;
+  border: none;
+  border-radius: 8px;
+  text-indent: 6px;
+  font-size: 18px;
+}

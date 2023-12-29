@@ -1,3 +1,46 @@
+.SignIn_Container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+
 .Logo_Img {
-  width: 80vw;
+}
+
+.SignIn_Text {
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	margin-bottom: 3%;
+}
+
+.SignIn_Form {
+  text-align: center;
+}
+
+.SignIn_Form_Input {
+  margin-bottom: 30px;
+}
+
+.SignIn_Form_Input > Input {
+  margin-bottom: 10px;
+}
+
+.SignIn_Button_Form {
+  margin-bottom: 10px;
+}
+
+.SignIn_Button_Form > Button {
+  width: 70vw;
+}
+
+.SignIn_Login_Text {
+  color: white;
+}
+
+.SignIn_Login_Text > a {
+  color: #51dbee;
 }
