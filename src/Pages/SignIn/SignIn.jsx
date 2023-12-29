@@ -8,7 +8,6 @@ import Input from '../../Components/UI/Input/Input.jsx';
 import { Link } from 'react-router-dom';
 
 const SignIn = () => {
-	const [name, setName] = useState('');
 	const [userId, setUserId] = useState('');
 	const [password, setPassword] = useState('');
 
