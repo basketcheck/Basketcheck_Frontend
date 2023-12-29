@@ -1,0 +1,25 @@
+.Main_Container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.Main_Date {
+	font-size: 25px;
+	color: white;
+}
+
+.Main_GoBasketBall {
+	font-size: 30px;
+	color: white;
+}
+
+.Main_NowPeople {
+	position: absolute;
+	top: 90%;
+	left: 75%;
+	transform: translate(-50%, -50%);
+}

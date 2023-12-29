@@ -50,7 +50,7 @@ const SignUp = () => {
 
 					<div className='SignUp_Login_Text'>
 						아이디가 있으신가요?{' '}
-						<Link to={'/auth/signup'}>로그인</Link>
+						<Link to={'/auth/signin'}>로그인</Link>
 					</div>
 				</div>
 			</div>
