@@ -1,11 +1,25 @@
 import React from 'react';
 import './index.css';
 
-const Index = ({ Text, onClickMethod }) => {
+const Index = ({ White, Text, onClickMethod }) => {
 	return (
-		<button className='Button_Container' onClick={onClickMethod}>
-			{Text}
-		</button>
+		<>
+			{White ? (
+				<button
+					className='Button_Container White'
+					onClick={onClickMethod}
+				>
+					{Text}
+				</button>
+			) : (
+				<button
+					className='Button_Container Blue'
+					onClick={onClickMethod}
+				>
+					{Text}
+				</button>
+			)}
+		</>
 	);
 };
 
