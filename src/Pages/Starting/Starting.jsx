@@ -85,6 +85,14 @@ const Starting = () => {
               }}
             />
           </div>
+          <div className="Starting_Vote">
+            <Button
+              Text={"투표 하러 가기"}
+              onClickMethod={() => {
+                history("/");
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>
