@@ -49,6 +49,6 @@
 .Starting_Buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: start;
 	width: 60vw;
 }
