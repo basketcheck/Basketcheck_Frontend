@@ -6,10 +6,18 @@ import Logo from '../../IMG/Logo.png';
 import Button from '../../Components/UI/Button/Button.jsx';
 import Input from '../../Components/UI/Input/Input.jsx';
 import { Link } from 'react-router-dom';
+import { customAxios } from 'lib/customAxios';
 
 const SignIn = () => {
 	const [userId, setUserId] = useState('');
 	const [password, setPassword] = useState('');
+
+	const onSubmit = async () => {
+		await customAxios.post('/login/signin', {
+			Id: userId,
+			password: password,
+		});
+	};
 
 	return (
 		<div>
@@ -37,11 +45,17 @@ const SignIn = () => {
 					</div>
 
 					<div className='SignIn_Button_Form'>
-						<Button Text={'회원가입'}/>
+						<Button
+							Text={'회원가입'}
+							onClickMethod={() => {
+								onSubmit();
+							}}
+						/>
 					</div>
 
 					<div className='SignIn_Login_Text'>
-						아이디가 없으신가요? <Link to={'/auth/signup'}>회원가입</Link>
+						아이디가 없으신가요?{' '}
+						<Link to={'/auth/signup'}>회원가입</Link>
 					</div>
 				</div>
 			</div>
