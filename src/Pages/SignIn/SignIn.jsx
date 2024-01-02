@@ -7,8 +7,11 @@ import Button from "../../Components/UI/Button/Button.jsx";
 import Input from "../../Components/UI/Input/Input.jsx";
 import { Link } from "react-router-dom";
 import { customAxios } from "../../Axios/AuthAxios";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const history = useNavigate();
+
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,7 +22,9 @@ const SignIn = () => {
         password: password,
       })
       .then((res) => {
-        console.log(res.data.message);
+        alert(res.data.message);
+        history("/");
+        localStorage.setItem("accessToken", res.accessToken);
       })
       .catch((res) => {
         console.log(res.data.message);
