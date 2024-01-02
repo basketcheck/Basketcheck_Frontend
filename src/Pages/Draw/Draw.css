@@ -44,6 +44,7 @@
 .Draw_Right {
 	border-radius: 0px 10px 10px 0px;
 	background-color: #28282b;
+	color: white;
 }
 
 .Draw_Buttons {
