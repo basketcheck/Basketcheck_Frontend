@@ -1,0 +1,54 @@
+.Bench_Container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.Bench_Text {
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+}
+
+.Bench_List {
+	display: flex;
+	flex-direction: column;
+	width: 60vw;
+	height: 60vh;
+	background-color: #28282b;
+	margin-top: 10px;
+	border-radius: 10px;
+	overflow: scroll;
+	margin-bottom: 10px;
+}
+
+.Bench_List_Main {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 8%;
+	min-height: 8%;
+	align-items: center;
+	font-size: 25px;
+	justify-content: space-around;
+	color: white;
+}
+
+.Bench_List_Back_White {
+	background-color: #d9d9d985;
+}
+
+.Bench_List_Name {
+	margin-right: 20%;
+}
+
+.Bench_Buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 60vw;
+}
