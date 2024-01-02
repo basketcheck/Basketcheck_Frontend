@@ -3,52 +3,29 @@ import "./Bench.css";
 import Header from "../../Components/Header/Header.jsx";
 import Button from "../../Components/UI/Button/Button.jsx";
 import { useNavigate } from "react-router-dom";
-
-const BenchMemberData = [
-  {
-    id: "1",
-    name: "이창보",
-  },
-  {
-    id: "2",
-    name: "이재현",
-  },
-  {
-    id: "3",
-    name: "한태영",
-  },
-  {
-    id: "4",
-    name: "권세원",
-  },
-  {
-    id: "5",
-    name: "김규민",
-  },
-  {
-    id: "6",
-    name: "김석진",
-  },
-  {
-    id: "7",
-    name: "강도현",
-  },
-  {
-    id: "8",
-    name: "최서훈",
-  },
-  {
-    id: "9",
-    name: "강도현",
-  },
-  {
-    id: "10",
-    name: "강웅빈",
-  },
-];
+import { customAxios } from "../../Axios/AuthAxios";
 
 const Bench = () => {
   const history = useNavigate();
+  let BenchMemberData = [];
+  // async 함수 안에서만 await을 사용할 수 있습니다.
+  async function fetchData() {
+    try {
+      // 비동기 요청을 수행하고 응답을 기다립니다.
+      const response = await customAxios.get("/team/changer");
+
+      // 응답 데이터를 변수에 할당하거나 원하는 작업을 수행합니다.
+      BenchMemberData = response.data;
+
+      // 여기에서 BenchMemberData를 사용할 수 있습니다.
+      console.log(BenchMemberData);
+    } catch (error) {
+      // 에러가 발생한 경우 에러를 처리합니다.
+      console.error("Error fetching data:", error);
+    }
+  }
+  // fetchData 함수를 호출하여 비동기로 데이터를 가져옵니다.
+  fetchData();
 
   return (
     <div>
