@@ -8,30 +8,22 @@ import Button from "../../Components/UI/Button/Button";
 
 const Draw = () => {
   const history = useNavigate();
-  const [startingMemberData, setStartingMemberData] = useState([]);
-  const startingMember = []
+  const [shuffledMemberData, setShuffledMemberData] = useState([]);
 
-  // async 함수 안에서만 await을 사용할 수 있습니다.
-  const fetchData = () => {
-    customAxios
-      .get("/team/shuffle")
-      .then((res) => {
-		console.log(res.data);
-		// for (let i in res.data.team1) {
-		// 	console.log(res.data.team1[i]);
-		// 	startingMember.push({...res.data.team1[i]})
-		// 	console.log(startingMember);
-		// }
-        // console.log(res.data.team1);
-        // setStartingMemberData(res.data);
-        // console.log(startingMemberData);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await customAxios.get("/team/shuffle");
+      console.log(response.data.shuffledVotes);
+      setShuffledMemberData(response.data.shuffledVotes);
+      console.log(shuffledMemberData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
-  // fetchData 함수를 호출하여 비동기로 데이터를 가져옵니다.
-  fetchData();
 
   return (
     <div>
@@ -42,20 +34,26 @@ const Draw = () => {
 
         <div className="Draw">
           <div className="Draw_Left">
-            {startingMember.team1.map((item) => (
-              <div>{item.name}</div>
+            {shuffledMemberData.slice(0, 5).map((item) => (
+              <div>{item}</div>
             ))}
           </div>
           <div className="Draw_Right">
-            {/* {startingMemberData.team2.map((item) => (
-              <div>{item.name}</div>
-            ))} */}
+            {shuffledMemberData.slice(5, 10).map((item) => (
+              <div>{item}</div>
+            ))}
           </div>
         </div>
 
         <div className="Draw_Buttons">
           <div className="Draw_ButtonDiv">
-            <Button White={true} Text={"팀 뽑기"} />
+            <Button
+              White={true}
+              Text={"팀 뽑기"}
+              onClickMethod={() => {
+                fetchData();
+              }}
+            />
           </div>
 
           <div className="Draw_NowPeople">
