@@ -23,15 +23,15 @@ const Main = () => {
           alt="LogoIMG"
           className="Logo_Img"
           onClick={() => {
-            if (localStorage.getItem("accessToken")) history("/draw");
-            else history("/auth/signin");
+            if (localStorage.getItem("accessToken")) {
+            }
           }}
         />
         <div
           className="Main_GoBasketBall"
           onClick={() => {
-            if (localStorage.getItem("accessToken")) history("/draw");
-            else history("/auth/signin");
+            if (localStorage.getItem("accessToken")) {
+            }
           }}
         >
           농구하러 가기
