@@ -12,7 +12,7 @@ const Bench = () => {
   async function fetchData() {
     try {
       // 비동기 요청을 수행하고 응답을 기다립니다.
-      const response = await customAxios.get("/team/starting");
+      const response = await customAxios.get("/team/changer");
 
       // 응답 데이터를 변수에 할당하거나 원하는 작업을 수행합니다.
       BenchMemberData = response.data;
