@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SignIn.css";
 
 import Header from "../../Components/Header/Header.jsx";
@@ -15,6 +15,12 @@ const SignIn = () => {
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
 
+  useEffect(() => {
+    if (localStorage.getItem("accessToken")) {
+      history("/");
+    }
+  });
+
   const onSubmit = async () => {
     await customAxios
       .post("/login/signin", {
@@ -24,7 +30,7 @@ const SignIn = () => {
       .then((res) => {
         alert(res.data.message);
         history("/");
-        localStorage.setItem("accessToken", res.accessToken);
+        localStorage.setItem("accessToken", res.data.accessToken);
       })
       .catch((res) => {
         console.log(res.data.message);
