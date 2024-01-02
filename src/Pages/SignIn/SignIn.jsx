@@ -22,6 +22,10 @@ const SignIn = () => {
   });
 
   const onSubmit = async () => {
+    if (userId === "" || password === "") {
+      alert("작성하지 않은 부분이 있습니다.");
+      return;
+    }
     await customAxios
       .post("/login/signin", {
         Id: userId,
