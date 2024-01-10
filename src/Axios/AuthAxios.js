@@ -1,6 +1,5 @@
 import axios from "axios";
-const ServerURL =
-  "https://port-0-basketcheckbackend-node-9zxht12blq9gr7pi.sel4.cloudtype.app/";
+const ServerURL = process.env.REACT_APP_API_KEY;
 
 export const customAxios = axios.create({
   baseURL: `${ServerURL}`,
