@@ -37,7 +37,7 @@ const SignIn = () => {
         localStorage.setItem("accessToken", res.data.accessToken);
       })
       .catch((res) => {
-        console.log(res.data.message);
+        console.log(res);
       });
   };
 
