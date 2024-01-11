@@ -17,9 +17,7 @@ const Draw = () => {
   const fetchData = async () => {
     try {
       const response = await customAxios.get("/team/shuffle");
-      console.log(response.data.shuffledVotes);
       setShuffledMemberData(response.data.shuffledVotes);
-      console.log(shuffledMemberData);
     } catch (error) {
       console.error("Error fetching data:", error);
     }

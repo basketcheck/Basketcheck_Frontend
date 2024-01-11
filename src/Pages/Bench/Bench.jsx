@@ -19,7 +19,6 @@ const Bench = () => {
         // 응답 데이터를 변수에 할당하거나 원하는 작업을 수행합니다.
         setBenchMemberData(response.data.votes);
         // 여기에서 BenchMemberData를 사용할 수 있습니다.
-        console.log(benchMemberData);
       } catch (error) {
         // 에러가 발생한 경우 에러를 처리합니다.
         console.error("Error fetching data:", error);

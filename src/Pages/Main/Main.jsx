@@ -36,12 +36,10 @@ const Main = () => {
       await customAxios
         .get("/team/join")
         .then((res) => {
-          console.log(res.data.message);
-          console.log(res.data.status);
           setIsJoinned(res.data.status);
         })
         .catch((res) => {
-          console.log(res.data.message);
+          alert("참여 상태를 확인할 수 없습니다.");
         });
     };
     checkJoin();
