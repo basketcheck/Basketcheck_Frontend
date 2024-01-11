@@ -22,10 +22,6 @@ const Starting = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    // startingMemberData가 변경될 때마다 실행됩니다.
-    console.log(startingMemberData);
-  }, [startingMemberData]);
 
   return (
     <div>
