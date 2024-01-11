@@ -33,7 +33,7 @@ const SignUp = () => {
       })
       .catch((res) => {
         alert(res.response.data.message);
-        // window.location.reload();
+        window.location.reload();
       });
   };
 
