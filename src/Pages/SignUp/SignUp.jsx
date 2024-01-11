@@ -28,7 +28,7 @@ const SignUp = () => {
         password: password,
       })
       .then((res) => {
-        console.log(res.data.message);
+        alert(res.data.message);
         history("/auth/signin");
       })
       .catch((res) => {
