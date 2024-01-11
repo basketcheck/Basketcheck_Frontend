@@ -32,8 +32,8 @@ const SignUp = () => {
         history("/auth/signin");
       })
       .catch((res) => {
-        alert(res.data.message);
-        window.location.reload();
+        alert(res.response.data.message);
+        // window.location.reload();
       });
   };
 
